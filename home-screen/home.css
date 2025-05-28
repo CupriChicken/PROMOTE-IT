@@ -1,0 +1,18 @@
+/* custom font  */
+@font-face {
+    font-family: 'Bangers';
+    src: url(../fonts/Bangers/Bangers-Regular.ttf);
+}
+
+
+#demo {
+    background-color: blue;
+    font-family: 'Bangers';
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    animation: fadeIn 3s ease-in-out 1, moveUp 1s ease-in-out 3s forwards; /* Animation sequence */
+}
