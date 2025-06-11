@@ -1,92 +1,97 @@
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
+@font-face {
+  font-family: bangers;
+  src: url(../fonts/Bangers/Bangers-Regular.ttf) format('truetype');
+}
 
-    .hero-section {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-    }
+/* Algemene body-styling */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: bangers;
+}
 
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
+/* Hero-sectie die de hele viewport beslaat */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
 
-    .logo-container {
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      z-index: 10;
-    }
+/* Achtergrondafbeelding die het hele scherm vult */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-    .logo {
-      max-width: 90vw;
-      width: 700px;
-      height: auto;
-    }
+/* Container voor het logo in het midden bovenaan */
+.logo-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
 
-    .countdown-container {
-      position: absolute;
-      bottom: 60px;
-      left: 50%;
-      transform: translateX(-50%) rotate(-10deg);
-      background-color: rgba(255, 255, 255, 0.85);
-      text-align: center;
-      width: 100%;
-      max-width: 1000px;
-      padding: 1rem 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
+/* Stijl voor het logo-afbeelding */
+.logo {
+  max-width: 90vw;
+  width: 700px;
+  height: auto;
+}
 
-    .countdown {
-      font-size: 12vw;
-      font-weight: bold;
-      color: black;
-    }
+/* Container voor de countdown timer onderaan in het midden */
+.countdown-container {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg); /* Draaiing voor een speels effect */
+  background-color: rgba(255, 255, 255, 0.85); /* Witte achtergrond met transparantie */
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
+}
 
-    @media (min-width: 768px) {
-      .countdown {
-        font-size: 6vw;
-      }
-    }
+/* Stijl voor de countdown-tekst */
+.countdown {
+  font-size: 12vw;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 0.1em;
+}
 
-    @media (min-width: 1200px) {
-      .countdown-container {
-        padding: 2rem 4rem;
-      }
+/* Responsieve aanpassing vanaf 768px breedte */
+@media (min-width: 768px) {
+  .countdown {
+    font-size: 6vw;
+  }
+}
 
-      .countdown {
-        font-size: 4vw;
-      }
-    }
+/* Verdere aanpassingen voor grote schermen (vanaf 1200px) */
+@media (min-width: 1200px) {
+  .countdown-container {
+    padding: 2rem 4rem;
+  }
 
-    .custom-tab {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 10px 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 20;
-      font-weight: bold;
-      border-bottom-right-radius: 10px;
-    }
+  .countdown {
+    font-size: 4vw;
+  }
+}
 
-    .main-button {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 20;
-    }
+
+/* Knop onderaan in het midden van het scherm */
+.main-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
