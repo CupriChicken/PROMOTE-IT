@@ -99,3 +99,14 @@ body {
 }
 
 
+#yellow {
+    position: absolute;
+    top: 63.5vh;  
+    left: 5vw;  
+}
+
+#lightgreen {
+     position: absolute;
+  top: 80vh;  
+  left: 5vw;  
+}
