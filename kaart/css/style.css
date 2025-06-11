@@ -2,7 +2,7 @@ html {
   overflow: hidden;
 }
 body {
-    background-image: url('./imgs/bg_kaart.png');
+    background-image: url('./imgs/background/bg-kaart.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,6 +24,6 @@ div #map {
     max-width: 1400px;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 500px;
+    margin-bottom: 15%;
 
 }
