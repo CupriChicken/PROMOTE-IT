@@ -1,18 +1,92 @@
-/* custom font  */
-@font-face {
-    font-family: 'Bangers';
-    src: url(../fonts/Bangers/Bangers-Regular.ttf);
-}
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
 
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+    }
 
-#timer {
-    background-color: blue;
-    font-family: 'Bangers';
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    animation: fadeIn 3s ease-in-out 1, moveUp 1s ease-in-out 3s forwards; /* Animation sequence */
-}
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .logo {
+      max-width: 90vw;
+      width: 700px;
+      height: auto;
+    }
+
+    .countdown-container {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-10deg);
+      background-color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      width: 100%;
+      max-width: 1000px;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .countdown {
+      font-size: 12vw;
+      font-weight: bold;
+      color: black;
+    }
+
+    @media (min-width: 768px) {
+      .countdown {
+        font-size: 6vw;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .countdown-container {
+        padding: 2rem 4rem;
+      }
+
+      .countdown {
+        font-size: 4vw;
+      }
+    }
+
+    .custom-tab {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      font-weight: bold;
+      border-bottom-right-radius: 10px;
+    }
+
+    .main-button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+    }
