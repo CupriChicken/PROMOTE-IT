@@ -48,7 +48,7 @@ body {
 /* Container voor de countdown timer onderaan in het midden */
 .countdown-container {
   position: absolute;
-  bottom: 60px;
+  bottom: 200px;
   left: 50%;
   transform: translateX(-50%) rotate(-10deg); /* Draaiing voor een speels effect */
   background-color: rgba(255, 255, 255, 0.85); /* Witte achtergrond met transparantie */
@@ -85,7 +85,6 @@ body {
   }
 }
 
-
 /* Knop onderaan in het midden van het scherm */
 .main-button {
   position: absolute;
@@ -95,3 +94,9 @@ body {
   z-index: 20;
 }
 
+@media (min-width: 768px) {
+  .btn-lg {
+    font-size: 2rem;
+    padding: 1.25rem 3.5rem;
+  }
+}
