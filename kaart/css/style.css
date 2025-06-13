@@ -1,42 +1,85 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    overflow-x: hidden;
-    font-size: 16px;
+  overflow-x: hidden;
+  font-size: 16px;
 }
 header {
-  z-index:1;
+  z-index: 1;
 }
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: url('./imgs/background/bg-kaart.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url("./imgs/background/bg-kaart.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
-#logo {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    display: block;
+#logo svg {
+  max-width: 300px;
+  margin-left: 1%;
+  height: auto;
+  display: block;
 }
 
 #mapHDCC {
-    width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-cntr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-8%);
+}
+#mobile {
+  display: none;
+}
+@media (max-width: 1700px) {
+  #logo svg {
+    max-width: 200px;
+    margin-left: 2%;
+  }
+  .map-cntr {
+    transform: translateY(-10%);
+  }
+
+  #mapHDCC {
+    width: 97%;
     height: 100%;
+  }
+  #mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #logo svg {
+    max-width: 150px;
+    margin-left: 3%;
+  }
+  #mobile {
+    display: inline-block;
+  }
+#map-desktop {
+    display: none;
+}
+#map-cntr {
+    display: none;
+  }
+   #map-cntr-mobile{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+    #mapHDCC-mobile {
+        width: 100%;
+        height: 10%;
+    }
 }
-.map-cntr {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY( -8%);
-}
-
