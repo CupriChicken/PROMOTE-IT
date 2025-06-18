@@ -1,10 +1,10 @@
-* {
-    box-sizing: border-box;
+@font-face {
+    font-family: bangers;
+    src: url(../../fonts/Bangers/Bangers-Regular.ttf) format('truetype');
 }
 
-html {
-    overflow-x: hidden;
-    font-size: 16px;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -16,6 +16,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    font-family: 'bangers', cursive;
+    font-size: 1.1em;
+    /* Add this for additional body text increase */
 }
 
 
@@ -45,55 +48,198 @@ body {
     margin: 0 auto 15vh auto;
 }
 
-#roze-popup {
+/* Simple popup base styles */
+.popup {
     position: absolute;
     display: none;
-    width:300px;
-    height:100px;
-    background-color: #ff69b4;
+    width: 600px;
+    /* Much bigger width */
+    min-height: 400px;
+    /* Much bigger height */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ccc;
+    z-index: 1000;
+    font-family: 'bangers', cursive;
+    font-size: 18px;
+    /* Increased from 16px */
 }
 
-#blauwe-popup{
+/* Popup content layout */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.popup-images {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.popup-image {
+    flex: 1;
+    max-width: 48%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.popup-text {
+    flex-grow: 1;
+}
+
+/* Close button for popup */
+.popup-close {
     position: absolute;
-    display: none;
-    width:300px;
-    height:100px;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Simple animation */
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Individual popup colors - solid colors */
+#roze-popup {
+    background-color: #ff69b4;
+    color: white;
+}
+
+#blauwe-popup {
     background-color: #1e90ff;
+    color: white;
 }
-#groene-popup{
-    position: absolute;
-    display: none;
-    width:300px;
-    height:100px;
+
+#groene-popup {
     background-color: #32cd32;
+    color: white;
 }
-#gele-popup{
-    position: absolute;
-    display: none;
-    width:300px;
-    height:100px;
-    background-color: #ffff00;
+
+#gele-popup {
+    background-color: #ffd700;
+    color: #333;
 }
-#rode-popup{
-    position: absolute;
-    display: none;
-    width:300px;
-    height:100px;
+
+#rode-popup {
     background-color: #ff4500;
+    color: white;
 }
-#donkerblauwe-popup{
-    position: absolute;
-    display: none;
-    width:300px;
-    height:100px;
+
+#donkerblauwe-popup {
     background-color: #00008b;
-}       
-#mint-popup{
-    position: absolute;
-    display: none;
-    width:300px;
-    height:100px;
+    color: white;
+}
+
+#mint-popup {
     background-color: #98ff98;
+    color: #333;
+}
+
+/* Popup content styling */
+.popup h3 {
+    font-size: 2.2em;
+    margin: 0 0 15px 0;
+    color: inherit;
+    letter-spacing: 0.1em;
+    /* Add letter spacing */
+}
+
+.popup p {
+    margin: 10px 0;
+    line-height: 1.4;
+    /* Add better line spacing */
+    font-size: 1.1em;
+    /* Make paragraph text slightly larger */
+    color: inherit;
+}
+
+/* Simple responsive styles */
+@media (max-width: 768px) {
+    .popup {
+        width: 90%;
+        max-width: 500px;
+        min-height: 350px;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .popup h3 {
+        font-size: 20px;
+    }
+
+    .popup-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .popup-image {
+        max-width: 100%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 95%;
+        min-height: 300px;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .popup h3 {
+        font-size: 18px;
+    }
+
+    .popup-image {
+        height: 120px;
+    }
+}
+
+/* Simple responsive styles */
+@media (max-width: 768px) {
+    .popup {
+        width: 250px;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .popup h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 90%;
+        max-width: 220px;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .popup h3 {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -146,4 +292,14 @@ body {
     #map {
         margin-bottom: 5vh;
     }
+}
+
+/* Add this to make SVG cards clickable */
+svg[id$="-kaart"] {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+svg[id$="-kaart"]:hover {
+    opacity: 0.8;
 }

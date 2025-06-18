@@ -1,14 +1,15 @@
 let rozeKaart = document.getElementById("roze-kaart");
-let rozePopup = document.getElementById("roze-popup"); 
+let rozePopup = document.getElementById("roze-popup");
 
-rozeKaart.addEventListener("click", function() {
-    //ophalen van de positie van de roze kaart + scroll + een offset
+rozeKaart.addEventListener("click", function () {
     let x = rozeKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = rozeKaart.getBoundingClientRect().top + window.scrollY + 100;
-    // Zet de positie van de popup
-    rozePopup.style.left = x + "px";
-    rozePopup.style.top = y + "px";
-    // Toggle the display of the popup
+
+    const adjustedPos = adjustPopupPosition(rozePopup, x, y);
+
+    rozePopup.style.left = adjustedPos.x + "px";
+    rozePopup.style.top = adjustedPos.y + "px";
+
     if (rozePopup.style.display === "none" || rozePopup.style.display === "") {
         rozePopup.style.display = "block";
     } else {
@@ -18,9 +19,9 @@ rozeKaart.addEventListener("click", function() {
 );
 
 let blauweKaart = document.getElementById("blauwe-kaart");
-let blauwePopup = document.getElementById("blauwe-popup"); 
+let blauwePopup = document.getElementById("blauwe-popup");
 
-blauweKaart.addEventListener("click", function() {
+blauweKaart.addEventListener("click", function () {
     //ophalen van de positie van de blauwe kaart + scroll + een offset
     let x = blauweKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = blauweKaart.getBoundingClientRect().top + window.scrollY + 100;
@@ -37,28 +38,30 @@ blauweKaart.addEventListener("click", function() {
 );
 
 let groeneKaart = document.getElementById("groene-kaart");
-let groenePopup = document.getElementById("groene-popup"); 
+let groenePopup = document.getElementById("groene-popup");
 
-groeneKaart.addEventListener("click", function() {
-    //ophalen van de positie van de groene kaart + scroll + een offset
+// Update groene kaart listener
+groeneKaart.addEventListener("click", function () {
     let x = groeneKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = groeneKaart.getBoundingClientRect().top + window.scrollY + 100;
-    // Zet de positie van de popup
-    groenePopup.style.left = x + "px";
-    groenePopup.style.top = y + "px";
-    // Toggle the display of the popup
-    if (groenePopup.style.display === "none" || groenePopup.style.display === "") {
-        groenePopup.style.display = "block";
-    } else {
-        groenePopup.style.display = "none";
-    }
+
+    // Show popup first to get its dimensions
+    groenePopup.style.display = "block";
+    groenePopup.style.visibility = "hidden"; // Hide it visually while we position it
+
+    // Now adjust position with actual dimensions
+    const adjustedPos = adjustPopupPosition(groenePopup, x, y);
+
+    groenePopup.style.left = adjustedPos.x + "px";
+    groenePopup.style.top = adjustedPos.y + "px";
+    groenePopup.style.visibility = "visible"; // Make it visible again
 }
 );
 
 let geleKaart = document.getElementById("gele-kaart");
-let gelePopup = document.getElementById("gele-popup"); 
+let gelePopup = document.getElementById("gele-popup");
 
-geleKaart.addEventListener("click", function() {
+geleKaart.addEventListener("click", function () {
     //ophalen van de positie van de gele kaart + scroll + een offset
     let x = geleKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = geleKaart.getBoundingClientRect().top + window.scrollY + 100;
@@ -75,9 +78,9 @@ geleKaart.addEventListener("click", function() {
 );
 
 let rodeKaart = document.getElementById("rode-kaart");
-let rodePopup = document.getElementById("rode-popup"); 
+let rodePopup = document.getElementById("rode-popup");
 
-rodeKaart.addEventListener("click", function() {
+rodeKaart.addEventListener("click", function () {
     //ophalen van de positie van de rode kaart + scroll + een offset
     let x = rodeKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = rodeKaart.getBoundingClientRect().top + window.scrollY + 100;
@@ -94,9 +97,9 @@ rodeKaart.addEventListener("click", function() {
 );
 
 let donkerblauweKaart = document.getElementById("donkerblauwe-kaart");
-let donkerblauwePopup = document.getElementById("donkerblauwe-popup"); 
+let donkerblauwePopup = document.getElementById("donkerblauwe-popup");
 
-donkerblauweKaart.addEventListener("click", function() {
+donkerblauweKaart.addEventListener("click", function () {
     //ophalen van de positie van de donkerblauwe kaart + scroll + een offset
     let x = donkerblauweKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = donkerblauweKaart.getBoundingClientRect().top + window.scrollY + 100;
@@ -113,16 +116,19 @@ donkerblauweKaart.addEventListener("click", function() {
 );
 
 let mintKaart = document.getElementById("mint-kaart");
-let mintPopup = document.getElementById("mint-popup"); 
+let mintPopup = document.getElementById("mint-popup");
 
-mintKaart.addEventListener("click", function() {
-    //ophalen van de positie van de mint kaart + scroll + een offset
+// Update mint kaart listener
+mintKaart.addEventListener("click", function () {
     let x = mintKaart.getBoundingClientRect().left + window.scrollX + 200;
     let y = mintKaart.getBoundingClientRect().top + window.scrollY + 100;
-    // Zet de positie van de popup
-    mintPopup.style.left = x + "px";
-    mintPopup.style.top = y + "px";
-    // Toggle the display of the popup
+
+    // Adjust position to prevent going off-screen
+    const adjustedPos = adjustPopupPosition(mintPopup, x, y);
+
+    mintPopup.style.left = adjustedPos.x + "px";
+    mintPopup.style.top = adjustedPos.y + "px";
+
     if (mintPopup.style.display === "none" || mintPopup.style.display === "") {
         mintPopup.style.display = "block";
     } else {
@@ -130,3 +136,69 @@ mintKaart.addEventListener("click", function() {
     }
 }
 );
+
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+// Close popup when clicking outside the content
+document.addEventListener('mousedown', function (e) {
+    document.querySelectorAll('.popup').forEach(function (popup) {
+        if (popup.style.display === "block" && !popup.querySelector('.popup-content').contains(e.target)) {
+            popup.style.display = "none";
+        }
+    });
+});
+
+// Close all popups with Escape key
+document.addEventListener('keydown', function (e) {
+    if (e.key === "Escape") {
+        document.querySelectorAll('.popup').forEach(function (popup) {
+            popup.style.display = "none";
+        });
+    }
+});
+
+function adjustPopupPosition(popup, x, y) {
+    // Temporarily show popup to get dimensions if it's hidden
+    const wasHidden = popup.style.display === "none" || popup.style.display === "";
+    if (wasHidden) {
+        popup.style.display = "block";
+        popup.style.visibility = "hidden";
+    }
+
+    // Get popup dimensions
+    const popupWidth = popup.offsetWidth;
+    const popupHeight = popup.offsetHeight;
+
+    // Hide it again if it was hidden
+    if (wasHidden) {
+        popup.style.display = "none";
+        popup.style.visibility = "visible";
+    }
+
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Adjust horizontal position if popup goes off right edge
+    if (x + popupWidth > viewportWidth) {
+        x = viewportWidth - popupWidth - 20;
+    }
+
+    // Adjust horizontal position if popup goes off left edge
+    if (x < 20) {
+        x = 20;
+    }
+
+    // Adjust vertical position if popup goes off bottom edge
+    if (y + popupHeight > viewportHeight + window.scrollY) {
+        y = viewportHeight + window.scrollY - popupHeight - 20;
+    }
+
+    // Adjust vertical position if popup goes off top edge
+    if (y < window.scrollY + 20) {
+        y = window.scrollY + 20;
+    }
+
+    return { x: x, y: y };
+}
