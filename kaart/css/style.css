@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-/* CUSTOM FONT IMPORT */
-/* Import the custom Bangers font for a comic book aesthetic */
-@font-face {
-    font-family: bangers;
-    src: url(../../fonts/Bangers/Bangers-Regular.ttf) format('truetype');
-}
-
-/* GLOBAL STYLES */
-/* Apply box-sizing to all elements for consistent sizing */
-=======
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 * {
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-/* BODY STYLING */
-/* Main page styling with background and typography */
-=======
 html {
     overflow-x: hidden;
     font-size: 16px;
 }
 
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 body {
     margin: 0;
     padding: 0;
@@ -34,13 +17,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-<<<<<<< HEAD
-    /* Use custom comic book font */
-    font-family: 'bangers', cursive;
-    /* Increased font size for better readability */
-    font-size: 1.1em;
-=======
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 }
 
 /* LOGO STYLING */
@@ -74,136 +50,28 @@ body {
     margin: 0 auto 15vh auto;
 }
 
-<<<<<<< HEAD
-/* POPUP BASE STYLES */
-/* Styling for information popups that appear when clicking map areas */
-.popup {
-    position: absolute;
-    display: none; /* Hidden by default */
-    width: 600px; /* Large enough to show content clearly */
-    min-height: 400px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border: 2px solid #ccc;
-    z-index: 1000; /* Ensure popups appear above map */
-    font-family: 'bangers', cursive;
-    font-size: 18px; /* Increased for better readability */
-}
-
-/* POPUP CONTENT LAYOUT */
-/* Internal structure of popup content */
-.popup-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 100%;
-    position: relative;
-}
-
-/* IMAGE GALLERY IN POPUPS */
-/* Container for popup images */
-.popup-images {
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
-}
-
-/* INDIVIDUAL POPUP IMAGES */
-/* Styling for images within popups */
-.popup-image {
-    flex: 1;
-    max-width: 48%;
-    height: 200px;
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-/* POPUP TEXT CONTENT */
-/* Text description area */
-.popup-text {
-    flex-grow: 1;
-}
-
-/* POPUP CLOSE BUTTON */
-/* X button to close popups */
-.popup-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-}
-
-/* POPUP ANIMATION */
-/* Smooth appearance animation for popups */
-@keyframes popupShow {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* INDIVIDUAL POPUP COLOR THEMES */
-/* Each area has its own color scheme matching the map */
-
-/* Experience Hall - Pink theme */
-#roze-popup {
-=======
 #roze-popup {
     position: absolute;
     display: none;
     width:300px;
     height:100px;
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #ff69b4;
 }
 
-<<<<<<< HEAD
-/* Gaming Area - Blue theme */
-#blauwe-popup {
-=======
 #blauwe-popup{
     position: absolute;
     display: none;
     width:300px;
     height:100px;
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #1e90ff;
 }
-<<<<<<< HEAD
-
-/* Activities - Green theme */
-#groene-popup {
-=======
 #groene-popup{
     position: absolute;
     display: none;
     width:300px;
     height:100px;
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #32cd32;
 }
-<<<<<<< HEAD
-
-/* Outdoor Area - Yellow theme */
-#gele-popup {
-    background-color: #ffd700;
-    color: #333; /* Dark text for yellow background */
-}
-
-/* Comic Area - Red theme */
-#rode-popup {
-=======
 #gele-popup{
     position: absolute;
     display: none;
@@ -216,111 +84,8 @@ body {
     display: none;
     width:300px;
     height:100px;
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #ff4500;
 }
-<<<<<<< HEAD
-
-/* Entertainment - Dark blue theme */
-#donkerblauwe-popup {
-    background-color: #00008b;
-    color: white;
-}
-
-/* Dealer Hall - Mint theme */
-#mint-popup {
-    background-color: #98ff98;
-    color: #333; /* Dark text for light background */
-}
-
-/* POPUP TYPOGRAPHY */
-/* Styling for text within popups */
-.popup h3 {
-    font-size: 2.2em;
-    margin: 0 0 15px 0;
-    color: inherit;
-    letter-spacing: 0.1em; /* Slight spacing for comic book feel */
-}
-
-.popup p {
-    margin: 10px 0;
-    line-height: 1.4; /* Better line spacing for readability */
-    font-size: 1.1em;
-    color: inherit;
-}
-
-/* RESPONSIVE DESIGN - TABLET */
-/* Adjustments for medium-sized screens */
-@media (max-width: 768px) {
-    .popup {
-        width: 90%;
-        max-width: 500px;
-        min-height: 350px;
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .popup h3 {
-        font-size: 20px;
-    }
-
-    /* Stack images vertically on smaller screens */
-    .popup-images {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .popup-image {
-        max-width: 100%;
-        height: 150px;
-    }
-}
-
-/* RESPONSIVE DESIGN - MOBILE */
-/* Adjustments for small screens */
-@media (max-width: 480px) {
-    .popup {
-        width: 95%;
-        min-height: 300px;
-        padding: 15px;
-        font-size: 13px;
-    }
-
-    .popup h3 {
-        font-size: 18px;
-    }
-
-    .popup-image {
-        height: 120px;
-    }
-}
-
-/* ALTERNATIVE MOBILE STYLES */
-/* Additional responsive adjustments */
-@media (max-width: 768px) {
-    .popup {
-        width: 250px;
-        padding: 15px;
-        font-size: 13px;
-    }
-
-    .popup h3 {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .popup {
-        width: 90%;
-        max-width: 220px;
-        padding: 12px;
-        font-size: 12px;
-    }
-
-    .popup h3 {
-        font-size: 14px;
-    }
-=======
 #donkerblauwe-popup{
     position: absolute;
     display: none;
@@ -334,11 +99,8 @@ body {
     width:300px;
     height:100px;
     background-color: #98ff98;
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 }
 
-/* RESPONSIVE DESIGN - TABLET LANDSCAPE */
-/* Adjustments for medium screens in landscape */
 @media only screen and (max-width: 1024px) {
     #map-container {
         padding: 0.75rem;
@@ -393,18 +155,4 @@ body {
         margin-bottom: 5vh;
     }
 <<<<<<< HEAD
-}
-
-/* INTERACTIVE MAP ELEMENTS */
-/* Styling for clickable SVG map areas */
-svg[id$="-kaart"] {
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: opacity 0.2s ease; /* Smooth hover effect */
-}
-
-/* Hover effect for map areas */
-svg[id$="-kaart"]:hover {
-    opacity: 0.8; /* Slight transparency on hover */
-=======
->>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 }
