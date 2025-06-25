@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* CUSTOM FONT IMPORT */
 /* Import the custom Bangers font for a comic book aesthetic */
 @font-face {
@@ -7,12 +8,22 @@
 
 /* GLOBAL STYLES */
 /* Apply box-sizing to all elements for consistent sizing */
+=======
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 * {
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* BODY STYLING */
 /* Main page styling with background and typography */
+=======
+html {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 body {
     margin: 0;
     padding: 0;
@@ -23,10 +34,13 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+<<<<<<< HEAD
     /* Use custom comic book font */
     font-family: 'bangers', cursive;
     /* Increased font size for better readability */
     font-size: 1.1em;
+=======
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 }
 
 /* LOGO STYLING */
@@ -60,6 +74,7 @@ body {
     margin: 0 auto 15vh auto;
 }
 
+<<<<<<< HEAD
 /* POPUP BASE STYLES */
 /* Styling for information popups that appear when clicking map areas */
 .popup {
@@ -143,21 +158,42 @@ body {
 
 /* Experience Hall - Pink theme */
 #roze-popup {
+=======
+#roze-popup {
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #ff69b4;
-    color: white;
 }
 
+<<<<<<< HEAD
 /* Gaming Area - Blue theme */
 #blauwe-popup {
+=======
+#blauwe-popup{
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #1e90ff;
-    color: white;
 }
+<<<<<<< HEAD
 
 /* Activities - Green theme */
 #groene-popup {
+=======
+#groene-popup{
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
     background-color: #32cd32;
-    color: white;
 }
+<<<<<<< HEAD
 
 /* Outdoor Area - Yellow theme */
 #gele-popup {
@@ -167,9 +203,23 @@ body {
 
 /* Comic Area - Red theme */
 #rode-popup {
-    background-color: #ff4500;
-    color: white;
+=======
+#gele-popup{
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+    background-color: #ffff00;
 }
+#rode-popup{
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
+    background-color: #ff4500;
+}
+<<<<<<< HEAD
 
 /* Entertainment - Dark blue theme */
 #donkerblauwe-popup {
@@ -270,6 +320,21 @@ body {
     .popup h3 {
         font-size: 14px;
     }
+=======
+#donkerblauwe-popup{
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+    background-color: #00008b;
+}       
+#mint-popup{
+    position: absolute;
+    display: none;
+    width:300px;
+    height:100px;
+    background-color: #98ff98;
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 }
 
 /* RESPONSIVE DESIGN - TABLET LANDSCAPE */
@@ -327,6 +392,7 @@ body {
     #map {
         margin-bottom: 5vh;
     }
+<<<<<<< HEAD
 }
 
 /* INTERACTIVE MAP ELEMENTS */
@@ -339,4 +405,6 @@ svg[id$="-kaart"] {
 /* Hover effect for map areas */
 svg[id$="-kaart"]:hover {
     opacity: 0.8; /* Slight transparency on hover */
+=======
+>>>>>>> parent of 94ea380 (Pop-ups succesvol afgerond)
 }
