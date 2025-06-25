@@ -1,106 +1,155 @@
+/* ==========================================
+   CUSTOM FONT IMPORT
+   ==========================================
+   Import custom Bangers font for comic book styling
+*/
 @font-face {
   font-family: bangers;
   src: url(../fonts/Bangers/Bangers-Regular.ttf) format('truetype');
 }
 
-/* Algemene body-styling */
+/* ==========================================
+   GLOBAL BODY STYLING
+   ==========================================
+   Main page setup with background and font
+*/
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: bangers;
+  font-family: bangers; /* Apply custom comic font */
+  /* Convention background image */
   background-image: url('../media/con\ 1.png');
 }
 
-/* Hero-sectie die de hele viewport beslaat */
+/* ==========================================
+   HERO SECTION
+   ==========================================
+   Full-screen landing area containing all main elements
+*/
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure full viewport height */
 }
 
-/* Achtergrondafbeelding die het hele scherm vult */
+/* ==========================================
+   BACKGROUND IMAGE
+   ==========================================
+   Positioning for background image (alternative to CSS background)
+*/
 .background {
   position: absolute;
   top: 0;
   left: 0;
+  /* Commented out dimensions - handled by CSS background instead */
   /* width: 100%;
   height: 100%; */
-  z-index: -1;
+  z-index: -1; /* Place behind all other content */
 }
 
-/* Container voor het logo in het midden bovenaan */
+/* ==========================================
+   LOGO CONTAINER
+   ==========================================
+   Centers the main convention logo at the top
+*/
 .logo-container {
   position: absolute;
-  top: 5%;
+  top: 5%; /* Position near top of screen */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Center horizontally */
   text-align: center;
-  z-index: 10;
+  z-index: 10; /* Ensure logo appears above background */
 }
 
-/* Stijl voor het logo-afbeelding */
+/* ==========================================
+   LOGO STYLING
+   ==========================================
+   Responsive logo sizing
+*/
 .logo {
-  max-width: 90vw;
-  width: 700px;
-  height: auto;
+  max-width: 90vw; /* Never exceed 90% of viewport width */
+  width: 700px; /* Preferred width on larger screens */
+  height: auto; /* Maintain aspect ratio */
 }
 
-/* Container voor de countdown timer onderaan in het midden */
+/* ==========================================
+   COUNTDOWN CONTAINER
+   ==========================================
+   Positioned countdown timer with decorative styling
+*/
 .countdown-container {
   position: absolute;
-  bottom: 200px;
+  bottom: 200px; /* Position above the main button */
   left: 50%;
-  transform: translateX(-50%) rotate(-10deg);
-  /* Draaiing voor een speels effect */
-  background-color: rgba(255, 255, 255, 0.85);
-  /* Witte achtergrond met transparantie */
+  transform: translateX(-50%) rotate(-10deg); /* Center and rotate for comic effect */
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
   text-align: center;
   width: 100%;
   max-width: 1000px;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  /* Schaduw voor diepte */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
 }
 
-/* Stijl voor de countdown-tekst */
+/* ==========================================
+   COUNTDOWN TIMER STYLING
+   ==========================================
+   Large, bold countdown display
+*/
 .countdown {
-  font-size: 12vw;
+  font-size: 12vw; /* Responsive font size based on viewport width */
   font-weight: bold;
   color: black;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1em; /* Slight letter spacing for readability */
 }
 
-/* Responsieve aanpassing vanaf 768px breedte */
+/* ==========================================
+   RESPONSIVE DESIGN - TABLET AND UP
+   ==========================================
+   Adjustments for medium and larger screens
+*/
 @media (min-width: 768px) {
   .countdown {
-    font-size: 6vw;
+    font-size: 6vw; /* Smaller relative size on larger screens */
   }
 }
 
-/* Verdere aanpassingen voor grote schermen (vanaf 1200px) */
+/* ==========================================
+   RESPONSIVE DESIGN - DESKTOP
+   ==========================================
+   Optimizations for large screens
+*/
 @media (min-width: 1200px) {
   .countdown-container {
-    padding: 2rem 4rem;
+    padding: 2rem 4rem; /* More padding on large screens */
   }
 
   .countdown {
-    font-size: 4vw;
+    font-size: 4vw; /* Fixed relative size for desktop */
   }
 }
 
-/* Knop onderaan in het midden van het scherm */
+/* ==========================================
+   MAIN CALL-TO-ACTION BUTTON
+   ==========================================
+   Primary button to navigate to the map page
+*/
 .main-button {
   position: absolute;
-  bottom: 10px;
+  bottom: 10px; /* Stick to bottom of screen */
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 20; /* Ensure button appears above all other elements */
 }
 
+/* ==========================================
+   RESPONSIVE BUTTON STYLING
+   ==========================================
+   Enhanced button sizing for larger screens
+*/
 @media (min-width: 768px) {
   .btn-lg {
     font-size: 2rem;
-    padding: 1.25rem 3.5rem;
+    padding: 1.25rem 3.5rem; /* Larger padding for better touch targets */
   }
 }

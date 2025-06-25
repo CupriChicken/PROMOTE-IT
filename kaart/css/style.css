@@ -1,27 +1,36 @@
+/* CUSTOM FONT IMPORT */
+/* Import the custom Bangers font for a comic book aesthetic */
 @font-face {
     font-family: bangers;
     src: url(../../fonts/Bangers/Bangers-Regular.ttf) format('truetype');
 }
 
+/* GLOBAL STYLES */
+/* Apply box-sizing to all elements for consistent sizing */
 * {
     box-sizing: border-box;
 }
 
+/* BODY STYLING */
+/* Main page styling with background and typography */
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    /* Background image for the convention map page */
     background-image: url('./imgs/background/bg-kaart.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    /* Use custom comic book font */
     font-family: 'bangers', cursive;
+    /* Increased font size for better readability */
     font-size: 1.1em;
-    /* Add this for additional body text increase */
 }
 
-
+/* LOGO STYLING */
+/* Convention logo in header */
 #logo {
     width: 80%;
     max-width: 400px;
@@ -29,7 +38,8 @@ body {
     display: block;
 }
 
-
+/* MAP CONTAINER */
+/* Centers the interactive map on the page */
 #map-container {
     display: flex;
     justify-content: center;
@@ -41,6 +51,8 @@ body {
     padding: 1rem;
 }
 
+/* MAP STYLING */
+/* The main interactive map SVG container */
 #map {
     width: 100%;
     height: auto;
@@ -48,25 +60,24 @@ body {
     margin: 0 auto 15vh auto;
 }
 
-/* Simple popup base styles */
+/* POPUP BASE STYLES */
+/* Styling for information popups that appear when clicking map areas */
 .popup {
     position: absolute;
-    display: none;
-    width: 600px;
-    /* Much bigger width */
+    display: none; /* Hidden by default */
+    width: 600px; /* Large enough to show content clearly */
     min-height: 400px;
-    /* Much bigger height */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border: 2px solid #ccc;
-    z-index: 1000;
+    z-index: 1000; /* Ensure popups appear above map */
     font-family: 'bangers', cursive;
-    font-size: 18px;
-    /* Increased from 16px */
+    font-size: 18px; /* Increased for better readability */
 }
 
-/* Popup content layout */
+/* POPUP CONTENT LAYOUT */
+/* Internal structure of popup content */
 .popup-content {
     display: flex;
     flex-direction: column;
@@ -75,26 +86,33 @@ body {
     position: relative;
 }
 
+/* IMAGE GALLERY IN POPUPS */
+/* Container for popup images */
 .popup-images {
     display: flex;
     gap: 15px;
     justify-content: space-between;
 }
 
+/* INDIVIDUAL POPUP IMAGES */
+/* Styling for images within popups */
 .popup-image {
     flex: 1;
     max-width: 48%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Maintain aspect ratio */
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+/* POPUP TEXT CONTENT */
+/* Text description area */
 .popup-text {
     flex-grow: 1;
 }
 
-/* Close button for popup */
+/* POPUP CLOSE BUTTON */
+/* X button to close popups */
 .popup-close {
     position: absolute;
     top: 15px;
@@ -107,74 +125,82 @@ body {
     z-index: 10;
 }
 
-/* Simple animation */
+/* POPUP ANIMATION */
+/* Smooth appearance animation for popups */
 @keyframes popupShow {
     from {
         opacity: 0;
         transform: scale(0.8);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
-/* Individual popup colors - solid colors */
+/* INDIVIDUAL POPUP COLOR THEMES */
+/* Each area has its own color scheme matching the map */
+
+/* Experience Hall - Pink theme */
 #roze-popup {
     background-color: #ff69b4;
     color: white;
 }
 
+/* Gaming Area - Blue theme */
 #blauwe-popup {
     background-color: #1e90ff;
     color: white;
 }
 
+/* Activities - Green theme */
 #groene-popup {
     background-color: #32cd32;
     color: white;
 }
 
+/* Outdoor Area - Yellow theme */
 #gele-popup {
     background-color: #ffd700;
-    color: #333;
+    color: #333; /* Dark text for yellow background */
 }
 
+/* Comic Area - Red theme */
 #rode-popup {
     background-color: #ff4500;
     color: white;
 }
 
+/* Entertainment - Dark blue theme */
 #donkerblauwe-popup {
     background-color: #00008b;
     color: white;
 }
 
+/* Dealer Hall - Mint theme */
 #mint-popup {
     background-color: #98ff98;
-    color: #333;
+    color: #333; /* Dark text for light background */
 }
 
-/* Popup content styling */
+/* POPUP TYPOGRAPHY */
+/* Styling for text within popups */
 .popup h3 {
     font-size: 2.2em;
     margin: 0 0 15px 0;
     color: inherit;
-    letter-spacing: 0.1em;
-    /* Add letter spacing */
+    letter-spacing: 0.1em; /* Slight spacing for comic book feel */
 }
 
 .popup p {
     margin: 10px 0;
-    line-height: 1.4;
-    /* Add better line spacing */
+    line-height: 1.4; /* Better line spacing for readability */
     font-size: 1.1em;
-    /* Make paragraph text slightly larger */
     color: inherit;
 }
 
-/* Simple responsive styles */
+/* RESPONSIVE DESIGN - TABLET */
+/* Adjustments for medium-sized screens */
 @media (max-width: 768px) {
     .popup {
         width: 90%;
@@ -188,6 +214,7 @@ body {
         font-size: 20px;
     }
 
+    /* Stack images vertically on smaller screens */
     .popup-images {
         flex-direction: column;
         gap: 10px;
@@ -199,6 +226,8 @@ body {
     }
 }
 
+/* RESPONSIVE DESIGN - MOBILE */
+/* Adjustments for small screens */
 @media (max-width: 480px) {
     .popup {
         width: 95%;
@@ -216,7 +245,8 @@ body {
     }
 }
 
-/* Simple responsive styles */
+/* ALTERNATIVE MOBILE STYLES */
+/* Additional responsive adjustments */
 @media (max-width: 768px) {
     .popup {
         width: 250px;
@@ -242,6 +272,8 @@ body {
     }
 }
 
+/* RESPONSIVE DESIGN - TABLET LANDSCAPE */
+/* Adjustments for medium screens in landscape */
 @media only screen and (max-width: 1024px) {
     #map-container {
         padding: 0.75rem;
@@ -257,9 +289,11 @@ body {
     }
 }
 
-
+/* RESPONSIVE DESIGN - TABLET PORTRAIT */
+/* Adjustments for tablet portrait orientation */
 @media only screen and (max-width: 768px) {
     body {
+        /* Switch to scroll attachment for better mobile performance */
         background-attachment: scroll;
     }
 
@@ -278,7 +312,8 @@ body {
     }
 }
 
-
+/* RESPONSIVE DESIGN - MOBILE PORTRAIT */
+/* Adjustments for small mobile screens */
 @media only screen and (max-width: 600px) {
     #logo {
         width: 80%;
@@ -294,12 +329,14 @@ body {
     }
 }
 
-/* Add this to make SVG cards clickable */
+/* INTERACTIVE MAP ELEMENTS */
+/* Styling for clickable SVG map areas */
 svg[id$="-kaart"] {
-    cursor: pointer;
-    transition: opacity 0.2s ease;
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: opacity 0.2s ease; /* Smooth hover effect */
 }
 
+/* Hover effect for map areas */
 svg[id$="-kaart"]:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Slight transparency on hover */
 }
