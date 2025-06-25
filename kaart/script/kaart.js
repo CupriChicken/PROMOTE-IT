@@ -12,6 +12,7 @@
 */
 let rozeKaart = document.getElementById("roze-kaart");
 let rozePopup = document.getElementById("roze-popup"); 
+let rozePopup = document.getElementById("roze-popup"); 
 
 rozeKaart.addEventListener("click", function () {
     // Calculate popup position relative to clicked area
@@ -40,6 +41,7 @@ rozeKaart.addEventListener("click", function () {
 */
 let blauweKaart = document.getElementById("blauwe-kaart");
 let blauwePopup = document.getElementById("blauwe-popup"); 
+let blauwePopup = document.getElementById("blauwe-popup"); 
 
 blauweKaart.addEventListener("click", function () {
     // Get position of the blue area + scroll offset + visual offset
@@ -65,6 +67,7 @@ blauweKaart.addEventListener("click", function () {
    Uses special positioning logic to prevent off-screen display
 */
 let groeneKaart = document.getElementById("groene-kaart");
+let groenePopup = document.getElementById("groene-popup"); 
 let groenePopup = document.getElementById("groene-popup"); 
 
 groeneKaart.addEventListener("click", function () {
@@ -92,6 +95,7 @@ groeneKaart.addEventListener("click", function () {
 */
 let geleKaart = document.getElementById("gele-kaart");
 let gelePopup = document.getElementById("gele-popup"); 
+let gelePopup = document.getElementById("gele-popup"); 
 
 geleKaart.addEventListener("click", function () {
     // Get position of yellow area + scroll + offset
@@ -116,6 +120,7 @@ geleKaart.addEventListener("click", function () {
    Handles clicks on the red comic area
 */
 let rodeKaart = document.getElementById("rode-kaart");
+let rodePopup = document.getElementById("rode-popup"); 
 let rodePopup = document.getElementById("rode-popup"); 
 
 rodeKaart.addEventListener("click", function () {
@@ -142,6 +147,7 @@ rodeKaart.addEventListener("click", function () {
 */
 let donkerblauweKaart = document.getElementById("donkerblauwe-kaart");
 let donkerblauwePopup = document.getElementById("donkerblauwe-popup"); 
+let donkerblauwePopup = document.getElementById("donkerblauwe-popup"); 
 
 donkerblauweKaart.addEventListener("click", function () {
     // Get position of dark blue area + scroll + offset
@@ -167,6 +173,7 @@ donkerblauweKaart.addEventListener("click", function () {
    Uses smart positioning to prevent off-screen display
 */
 let mintKaart = document.getElementById("mint-kaart");
+let mintPopup = document.getElementById("mint-popup"); 
 let mintPopup = document.getElementById("mint-popup"); 
 
 mintKaart.addEventListener("click", function () {
