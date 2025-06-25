@@ -17,9 +17,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: bangers; /* Apply custom comic font */
-  /* Convention background image */
-  background-image: url('../media/con\ 1.png');
+  font-family: bangers;
 }
 
 /* ==========================================
@@ -42,10 +40,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  /* Commented out dimensions - handled by CSS background instead */
-  /* width: 100%;
-  height: 100%; */
-  z-index: -1; /* Place behind all other content */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 /* ==========================================
@@ -82,13 +79,13 @@ body {
   position: absolute;
   bottom: 200px; /* Position above the main button */
   left: 50%;
-  transform: translateX(-50%) rotate(-10deg); /* Center and rotate for comic effect */
-  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+  transform: translateX(-50%) rotate(-10deg); /* Draaiing voor een speels effect */
+  background-color: rgba(255, 255, 255, 0.85); /* Witte achtergrond met transparantie */
   text-align: center;
   width: 100%;
   max-width: 1000px;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
 }
 
 /* ==========================================
